@@ -15,6 +15,7 @@ const Container = styled.div<ContainerProps>`
 interface CircleProps {
   bgColor: string;
   borderColor?: string;
+  text?: string;
 }
 
 // export default function Circle({ bgColor }: CircleProps) {
@@ -23,6 +24,8 @@ export default function Circle(props: CircleProps) {
     <Container
       bgColor={props.bgColor}
       borderColor={props.borderColor ?? 'green'}
-    />
+    >
+      {props.text ?? '디폴트입니다.'}
+    </Container>
   );
 }
